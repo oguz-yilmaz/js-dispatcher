@@ -4,10 +4,10 @@ declare global {
     var MockHandler: (handler: AbstractHandler, mockImplementation: any) => any
 }
 
-const isDef = (val) => val !== undefined && val !== null
+const isDef = (val: any) => val !== undefined && val !== null
 
 global.MockHandler = (handler: AbstractHandler, props = []) => {
-    const tmpHandler = {}
+    const tmpHandler = {} as any
 
     for (const {prop, impl} of props) {
         tmpHandler[prop] = jest.fn()
