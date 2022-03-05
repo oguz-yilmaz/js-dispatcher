@@ -1,7 +1,5 @@
 ## js-dispatcher 
-Library for handling dispachable events like Commands, Jobs, etc. It can be  
-used any form off structure where mediator pattern is required.
-
+Library for handling dispachable events like Commands, Jobs, etc.
 ### Installation 
 ``` npm install @o.yilmaz/js-dispatcher```
 ### Example usage 

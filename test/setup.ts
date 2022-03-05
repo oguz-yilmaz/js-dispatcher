@@ -1,12 +1,12 @@
 import { AbstractHandler } from '../src'
 
 declare global {
-    var MockHandler: (handler: AbstractHandler, mockImplementation: any) => any
+    var Mock: (mockImplementation: any) => any
 }
 
 const isDef = (val: any) => val !== undefined && val !== null
 
-global.MockHandler = (handler: AbstractHandler, props = []) => {
+global.Mock = (props = []) => {
     const tmpHandler = {} as any
 
     for (const {prop, impl} of props) {
